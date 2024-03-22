@@ -16,6 +16,8 @@ const login = async (req,res)=>{
 }
 
 const dashboard = async(req,res)=>{
+    //send bearer token 
+    console.log(req.headers);
     const luckyNumber = Math.floor(Math.random()*100)
     res.status(200).json({msg:`Hello, Ben Bruce`, secret:`Here is your lucky Number ${luckyNumber}`})
 }
